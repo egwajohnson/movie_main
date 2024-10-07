@@ -3,7 +3,7 @@ const MOVIE_API = 'http://www.omdbapi.com/?apikey=' + API_KEY + '&s=';
 const SEARCH_API = 'http://www.omdbapi.com/?apikey=' + API_KEY + '&s=';
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetchTrendingMovies();
+    fetchTrendingMovies(); 
     document.getElementById('search-bar').addEventListener('input', handleSearch);
 });
 
@@ -12,7 +12,7 @@ async function fetchTrendingMovies() {
         const response = await fetch(MOVIE_API + 'movie');
         const data = await response.json();
         if (data.Response === "True") {
-            renderMovies(data.Search); // Use `data.Search` for the list of movies
+            renderMovies(data.Search);
         } else {
             console.error('Error fetching trending movies:', data.Error);
         }
@@ -112,5 +112,4 @@ function removeFromWatchlist(movieId) {
     renderWatchlist();
 }
 
-// Initial render of watchlist
 renderWatchlist();
