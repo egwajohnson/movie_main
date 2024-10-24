@@ -1,6 +1,6 @@
 const API_KEY = "7738d88"; // Your API key
-const MOVIE_API = 'http://www.omdbapi.com/?apikey=' + API_KEY + '&s=';
-const SEARCH_API = 'http://www.omdbapi.com/?apikey=' + API_KEY + '&s=';
+const MOVIE_API = 'https://www.omdbapi.com/?apikey=' + API_KEY + '&s=';
+const SEARCH_API = 'https://www.omdbapi.com/?apikey=' + API_KEY + '&s=';
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchTrendingMovies(); 
