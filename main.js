@@ -86,7 +86,7 @@ function renderWatchlist() {
     const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
     watchlistContainer.innerHTML = '';
     watchlist.forEach(movieId => {
-        fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}`)
+        fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}`)
             .then(response => response.json())
             .then(movie => {
                 if (movie.Response === "True") {
